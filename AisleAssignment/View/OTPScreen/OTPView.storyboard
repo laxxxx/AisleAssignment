@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="IUB-vn-t6G">
+            <objects>
+                <viewController storyboardIdentifier="OTPViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Lfc-48-GNn" customClass="OTPViewController" customModule="AisleAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t6r-io-B9v">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+91 9999999999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVK-gK-Lly">
+                                <rect key="frame" x="30" y="139" width="136" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter The OTP" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTq-Y6-zsr">
+                                <rect key="frame" x="30" y="176" width="187.66666666666666" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ff-IT-gda">
+                                <rect key="frame" x="30" y="232" width="78" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="43o-D5-rWa"/>
+                                    <constraint firstAttribute="width" constant="78" id="551-pe-Nrp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49O-kI-115">
+                                <rect key="frame" x="30" y="288" width="96" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="96" id="N6x-Fz-SDG"/>
+                                    <constraint firstAttribute="height" constant="40" id="hrJ-jz-m45"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Continue"/>
+                                <connections>
+                                    <action selector="continueButtonTapped:" destination="Lfc-48-GNn" eventType="touchUpInside" id="XUs-kw-lXV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUM-ps-io3">
+                                <rect key="frame" x="182" y="141" width="14" height="14"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="7de-EH-uMg"/>
+                                    <constraint firstAttribute="width" constant="14" id="xak-1o-S4o"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="applepencil.gen1" catalog="system"/>
+                                <connections>
+                                    <action selector="editButtonTapped:" destination="Lfc-48-GNn" eventType="touchUpInside" id="hdX-0n-HkP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="J1l-xg-AFF"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1ff-IT-gda" firstAttribute="top" secondItem="zTq-Y6-zsr" secondAttribute="bottom" constant="20" id="5DX-aN-hp7"/>
+                            <constraint firstItem="49O-kI-115" firstAttribute="top" secondItem="1ff-IT-gda" secondAttribute="bottom" constant="20" id="859-Pu-wRv"/>
+                            <constraint firstItem="zTq-Y6-zsr" firstAttribute="leading" secondItem="gVK-gK-Lly" secondAttribute="leading" id="9v9-oR-PQa"/>
+                            <constraint firstItem="J1l-xg-AFF" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gVK-gK-Lly" secondAttribute="trailing" symbolic="YES" id="HN3-mq-G7Q"/>
+                            <constraint firstItem="gVK-gK-Lly" firstAttribute="top" secondItem="J1l-xg-AFF" secondAttribute="top" constant="80" id="PTs-ZA-o72"/>
+                            <constraint firstItem="fUM-ps-io3" firstAttribute="bottom" secondItem="gVK-gK-Lly" secondAttribute="bottom" constant="-5" id="QiS-uw-Wly"/>
+                            <constraint firstItem="gVK-gK-Lly" firstAttribute="leading" secondItem="J1l-xg-AFF" secondAttribute="leading" constant="30" id="ivj-6F-UKs"/>
+                            <constraint firstItem="1ff-IT-gda" firstAttribute="leading" secondItem="gVK-gK-Lly" secondAttribute="leading" id="lvb-gQ-qXQ"/>
+                            <constraint firstItem="fUM-ps-io3" firstAttribute="leading" secondItem="gVK-gK-Lly" secondAttribute="trailing" constant="16" id="r2f-lG-NE6"/>
+                            <constraint firstItem="J1l-xg-AFF" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zTq-Y6-zsr" secondAttribute="trailing" constant="100" id="tKe-SR-9vW"/>
+                            <constraint firstItem="zTq-Y6-zsr" firstAttribute="top" secondItem="gVK-gK-Lly" secondAttribute="bottom" constant="16" id="tmL-YL-l9a"/>
+                            <constraint firstItem="49O-kI-115" firstAttribute="leading" secondItem="gVK-gK-Lly" secondAttribute="leading" id="xUA-Eq-rOv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vh6-VX-ec4"/>
+                    <connections>
+                        <outlet property="continueButton" destination="49O-kI-115" id="ht2-96-BbS"/>
+                        <outlet property="editButton" destination="fUM-ps-io3" id="M0s-I5-Std"/>
+                        <outlet property="enterOTPLabel" destination="zTq-Y6-zsr" id="X3G-Be-TFs"/>
+                        <outlet property="otpTextField" destination="1ff-IT-gda" id="J5D-Su-qag"/>
+                        <outlet property="phoneNoLabel" destination="gVK-gK-Lly" id="pKe-20-ePR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wQr-Sp-Yy6" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1874.0458015267175" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="applepencil.gen1" catalog="system" width="128" height="115"/>
+    </resources>
+</document>

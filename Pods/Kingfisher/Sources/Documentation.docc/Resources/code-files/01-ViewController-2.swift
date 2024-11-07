@@ -1,19 +1,11 @@
-//
-//  ViewController.swift
-//  AisleAssignment
-//
-//  Created by Sree Lakshman on 05/11/24.
-//
-
 import UIKit
+import Kingfisher
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        print(KingfisherManager.shared)
     }
-
-
 }
-

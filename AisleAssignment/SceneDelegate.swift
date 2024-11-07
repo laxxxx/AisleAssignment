@@ -17,6 +17,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        // Fetch token from Keychain
+            if let token = KeychainHelper.shared.getToken() {
+                
+                // Token found, show the main screen
+                let sb = UIStoryboard(name: "Home", bundle: nil)
+                let rootVC = sb.instantiateViewController(identifier: "RootViewController")
+                window?.rootViewController = rootVC
+            } else {
+                print("No token found, show login screen")
+                
+                // No token found, show login screen
+                let loginVC = UIStoryboard(name: "PhoneNumber", bundle: nil).instantiateViewController(withIdentifier: "PhoneNumberViewController")
+                window?.rootViewController = loginVC
+            }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -47,6 +62,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
+    func changeRootViewController(_ vc: UIViewController, animated: Bool = true) {
+        guard let window = self.window else {
+            return
+        }
 
+        window.rootViewController = vc
+        
+        UIView.transition(with: window,
+                          duration: 0.5,
+                          options: [],
+                          animations: nil,
+                          completion: nil)
+        
+    }
 }
 

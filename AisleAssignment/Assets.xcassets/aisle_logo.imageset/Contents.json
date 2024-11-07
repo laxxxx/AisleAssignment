@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "aisle_logo_black-p-500.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TmW-es-hrq">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Phone Number View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="PhoneNumberViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="PhoneNumberViewController" customModule="AisleAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get OTP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2k-R6-uet">
+                                <rect key="frame" x="30" y="139" width="70" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Your Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCo-dE-RTZ">
+                                <rect key="frame" x="30" y="176" width="193.66666666666666" height="71.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+91" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FsS-q0-LjA">
+                                <rect key="frame" x="30" y="267.66666666666669" width="58" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="idf-W1-q8r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c20-WS-Vya">
+                                <rect key="frame" x="108" y="267.66666666666669" width="147" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="F1L-9B-txP"/>
+                                    <constraint firstAttribute="width" constant="147" id="PmO-av-gFd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18c-m0-eFB">
+                                <rect key="frame" x="30" y="323.66666666666669" width="96" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="96" id="YLq-v6-Kus"/>
+                                    <constraint firstAttribute="height" constant="40" id="i36-am-fj6"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Continue"/>
+                                <connections>
+                                    <action selector="continueButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pec-sy-zZo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PCo-dE-RTZ" firstAttribute="top" secondItem="B2k-R6-uet" secondAttribute="bottom" constant="16" id="CWB-bG-3KL"/>
+                            <constraint firstItem="B2k-R6-uet" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="DJo-Dl-yP8"/>
+                            <constraint firstItem="c20-WS-Vya" firstAttribute="leading" secondItem="FsS-q0-LjA" secondAttribute="trailing" constant="20" id="Ekv-R1-vOE"/>
+                            <constraint firstItem="B2k-R6-uet" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="GxN-mA-fAN"/>
+                            <constraint firstItem="18c-m0-eFB" firstAttribute="top" secondItem="FsS-q0-LjA" secondAttribute="bottom" constant="20" id="J5k-y9-MJR"/>
+                            <constraint firstItem="18c-m0-eFB" firstAttribute="leading" secondItem="B2k-R6-uet" secondAttribute="leading" id="Syp-HV-FBU"/>
+                            <constraint firstItem="FsS-q0-LjA" firstAttribute="leading" secondItem="B2k-R6-uet" secondAttribute="leading" id="Wut-eh-qm6"/>
+                            <constraint firstItem="c20-WS-Vya" firstAttribute="top" secondItem="FsS-q0-LjA" secondAttribute="top" id="e4V-za-t0f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="B2k-R6-uet" secondAttribute="trailing" symbolic="YES" id="k0r-TL-1h9"/>
+                            <constraint firstItem="FsS-q0-LjA" firstAttribute="top" secondItem="PCo-dE-RTZ" secondAttribute="bottom" constant="20" id="sh0-PM-qs0"/>
+                            <constraint firstItem="PCo-dE-RTZ" firstAttribute="leading" secondItem="B2k-R6-uet" secondAttribute="leading" id="x6V-Ey-Y5b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PCo-dE-RTZ" secondAttribute="trailing" constant="100" id="xTj-Ns-aOD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8IH-C1-utz"/>
+                    <connections>
+                        <outlet property="continueButton" destination="18c-m0-eFB" id="jRY-8i-nQG"/>
+                        <outlet property="countryCodeTextField" destination="FsS-q0-LjA" id="euY-QH-RsI"/>
+                        <outlet property="enterPhoneNumberLabel" destination="PCo-dE-RTZ" id="mKq-vm-jlK"/>
+                        <outlet property="getOtpLabel" destination="B2k-R6-uet" id="YTy-eM-eSM"/>
+                        <outlet property="phoneNumberTextField" destination="c20-WS-Vya" id="oGW-DW-exo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="947.32824427480909" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tjg-jx-otv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="TmW-es-hrq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xPd-bf-XO3">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ici-ld-LLL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8xP-gk-S8S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20.610687022900763" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+</document>
