@@ -44,6 +44,6 @@ class RootViewController: UITabBarController {
         let profileVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
         profileVC.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person"), selectedImage: UIImage(systemName: "person.fill"))
         
-        self.viewControllers = [notesVC, discoverVC, matchesVC, profileVC]
+        self.viewControllers = [discoverVC, notesVC, matchesVC, profileVC]
     }
 }

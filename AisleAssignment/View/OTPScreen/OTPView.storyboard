@@ -34,7 +34,7 @@
                                     <constraint firstAttribute="width" constant="78" id="551-pe-Nrp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49O-kI-115">
                                 <rect key="frame" x="30" y="288" width="96" height="40"/>
@@ -51,11 +51,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUM-ps-io3">
-                                <rect key="frame" x="182" y="141" width="14" height="14"/>
+                                <rect key="frame" x="182" y="140" width="24" height="20"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="14" id="7de-EH-uMg"/>
-                                    <constraint firstAttribute="width" constant="14" id="xak-1o-S4o"/>
+                                    <constraint firstAttribute="height" constant="20" id="7de-EH-uMg"/>
+                                    <constraint firstAttribute="width" constant="24" id="xak-1o-S4o"/>
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -73,7 +73,7 @@
                             <constraint firstItem="zTq-Y6-zsr" firstAttribute="leading" secondItem="gVK-gK-Lly" secondAttribute="leading" id="9v9-oR-PQa"/>
                             <constraint firstItem="J1l-xg-AFF" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gVK-gK-Lly" secondAttribute="trailing" symbolic="YES" id="HN3-mq-G7Q"/>
                             <constraint firstItem="gVK-gK-Lly" firstAttribute="top" secondItem="J1l-xg-AFF" secondAttribute="top" constant="80" id="PTs-ZA-o72"/>
-                            <constraint firstItem="fUM-ps-io3" firstAttribute="bottom" secondItem="gVK-gK-Lly" secondAttribute="bottom" constant="-5" id="QiS-uw-Wly"/>
+                            <constraint firstItem="fUM-ps-io3" firstAttribute="bottom" secondItem="gVK-gK-Lly" secondAttribute="bottom" id="QiS-uw-Wly"/>
                             <constraint firstItem="gVK-gK-Lly" firstAttribute="leading" secondItem="J1l-xg-AFF" secondAttribute="leading" constant="30" id="ivj-6F-UKs"/>
                             <constraint firstItem="1ff-IT-gda" firstAttribute="leading" secondItem="gVK-gK-Lly" secondAttribute="leading" id="lvb-gQ-qXQ"/>
                             <constraint firstItem="fUM-ps-io3" firstAttribute="leading" secondItem="gVK-gK-Lly" secondAttribute="trailing" constant="16" id="r2f-lG-NE6"/>
