@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 class NotesViewController: UIViewController {
     
@@ -17,6 +18,7 @@ class NotesViewController: UIViewController {
     @IBOutlet weak var upgradeButton: UIButton!
     @IBOutlet weak var colectionView: UICollectionView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var profileDetailsLabel: UILabel!
     
     var viewModel = HomeViewModel()
     var likesData: [LikedProfile] = []
@@ -31,6 +33,8 @@ class NotesViewController: UIViewController {
         self.notesTitle.font = UIFont(name: "Gilroy-Bold", size: 27)
         self.notesSubtitle.font = UIFont(name: "Gilroy-Medium", size: 18)
         self.interestedLabel.font = UIFont(name: "Gilroy-Bold", size: 22)
+        self.profileDetailsLabel.font = UIFont(name: "Gilroy-Heavy", size: 18)
+        self.profileDetailsLabel.textColor = .white
         self.premiumLabel.text = "Premium members can \nview all their likes at once"
         self.premiumLabel.font = UIFont(name: "Gilroy-Medium", size: 15)
         self.premiumLabel.textColor = UIColor(hex: "#9B9B9B")
@@ -42,11 +46,12 @@ class NotesViewController: UIViewController {
             ]
         )
         
+        
         self.upgradeButton.setAttributedTitle(attributedString, for: .normal)
         self.upgradeButton.setAttributedTitle(attributedString, for: .highlighted)
         
-        self.imageView.image = UIImage(named: "Meena")
-        self.imageView.contentMode = .scaleAspectFit
+        self.imageView.contentMode = .scaleAspectFill
+        self.imageView.layer.cornerRadius = 24
         
         self.colectionView.dataSource = self
         self.colectionView.delegate = self
@@ -63,13 +68,27 @@ class NotesViewController: UIViewController {
         viewModel.onLikesFetchSuccess = { [weak self] likes in
             DispatchQueue.main.async {
                 self?.likesData = likes.profiles
+                self?.showProfileDetails(with: (self?.viewModel.profileName) ?? "N/A",
+                                   age: (self?.viewModel.profileAge) ?? "N/A",
+                                   imageURL: (self?.viewModel.profileImageURL)!)
                 self?.colectionView.reloadData()
+                
             }
         }
         
         self.viewModel.onError = { error in
             print("Error response \(error)")
             self.showAlert(message: "Failed get liked profiles \(error)")
+        }
+    }
+    
+    func showProfileDetails(with name: String, age: String, imageURL: String) {
+        DispatchQueue.main.async {
+            self.profileDetailsLabel.text = "\(name), \(age)"
+            
+            if let url = URL(string: imageURL) {
+                self.imageView.kf.setImage(with: url, placeholder: UIImage(named: ""))
+            }
         }
     }
 }
@@ -100,7 +119,7 @@ extension NotesViewController: UICollectionViewDelegate, UICollectionViewDataSou
             let itemWidth = availableWidth / numberOfItemsPerRow
             
             // Set a fixed height for each item
-            let itemHeight: CGFloat = 160 // Adjust as needed
+            let itemHeight: CGFloat = 170 // Adjust as needed
             
             return CGSize(width: itemWidth, height: itemHeight)
         }

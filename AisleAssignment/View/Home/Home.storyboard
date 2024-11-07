@@ -163,12 +163,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Izf-cB-Yd9">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BLW-st-BGp">
                                 <rect key="frame" x="12" y="153" width="369" height="300"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Izf-cB-Yd9">
+                                        <rect key="frame" x="0.0" y="0.0" width="369" height="300"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sK-Me-6VP">
+                                        <rect key="frame" x="24" y="249" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="Ezg-fo-mie"/>
+                                    <constraint firstItem="1sK-Me-6VP" firstAttribute="leading" secondItem="BLW-st-BGp" secondAttribute="leading" constant="24" id="9LQ-OJ-QBo"/>
+                                    <constraint firstItem="Izf-cB-Yd9" firstAttribute="leading" secondItem="BLW-st-BGp" secondAttribute="leading" id="9fh-od-F1J"/>
+                                    <constraint firstAttribute="bottom" secondItem="1sK-Me-6VP" secondAttribute="bottom" constant="30" id="JIE-Uj-lt8"/>
+                                    <constraint firstAttribute="trailing" secondItem="Izf-cB-Yd9" secondAttribute="trailing" id="N6z-CU-BWc"/>
+                                    <constraint firstAttribute="height" constant="300" id="PMR-VN-xNB"/>
+                                    <constraint firstItem="Izf-cB-Yd9" firstAttribute="top" secondItem="BLW-st-BGp" secondAttribute="top" id="VMC-f8-K3s"/>
+                                    <constraint firstAttribute="bottom" secondItem="Izf-cB-Yd9" secondAttribute="bottom" id="fkL-gL-xS8"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interested In You" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZeA-BJ-k8J">
                                 <rect key="frame" x="24" y="477" width="345" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -195,7 +213,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qDf-M4-aTz">
                                 <rect key="frame" x="24" y="570" width="345" height="179"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="epA-Rd-eo0">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="epA-Rd-eo0">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -218,7 +236,6 @@
                         <viewLayoutGuide key="safeArea" id="Veo-zQ-wAw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Veo-zQ-wAw" firstAttribute="trailing" secondItem="Izf-cB-Yd9" secondAttribute="trailing" constant="12" id="6pg-JM-NOZ"/>
                             <constraint firstItem="Veo-zQ-wAw" firstAttribute="bottom" secondItem="qDf-M4-aTz" secondAttribute="bottom" constant="20" id="C5p-xm-ckD"/>
                             <constraint firstItem="TrC-ip-dX3" firstAttribute="top" secondItem="ZkA-z8-VQH" secondAttribute="bottom" constant="12" id="Er6-cS-H28"/>
                             <constraint firstItem="ZeA-BJ-k8J" firstAttribute="leading" secondItem="Veo-zQ-wAw" secondAttribute="leading" constant="24" id="FRT-Hp-lre"/>
@@ -227,18 +244,19 @@
                             <constraint firstItem="ZkA-z8-VQH" firstAttribute="top" secondItem="Veo-zQ-wAw" secondAttribute="top" constant="20" id="IEe-FD-qVI"/>
                             <constraint firstItem="Veo-zQ-wAw" firstAttribute="trailing" secondItem="cqC-05-dGA" secondAttribute="trailing" constant="20" id="Lmh-R3-EeH"/>
                             <constraint firstItem="qDf-M4-aTz" firstAttribute="leading" secondItem="Veo-zQ-wAw" secondAttribute="leading" constant="24" id="Meh-0L-C7T"/>
-                            <constraint firstItem="ZeA-BJ-k8J" firstAttribute="top" secondItem="Izf-cB-Yd9" secondAttribute="bottom" constant="24" id="O9T-d7-HmX"/>
+                            <constraint firstItem="BLW-st-BGp" firstAttribute="leading" secondItem="2Ng-wt-NlE" secondAttribute="leading" constant="12" id="P6z-wH-PCB"/>
                             <constraint firstItem="HFE-G6-Wkj" firstAttribute="top" secondItem="ZeA-BJ-k8J" secondAttribute="bottom" constant="12" id="SD7-l7-zE2"/>
                             <constraint firstItem="HFE-G6-Wkj" firstAttribute="leading" secondItem="ZeA-BJ-k8J" secondAttribute="leading" id="d65-77-FDn"/>
                             <constraint firstItem="cB1-ag-X1Y" firstAttribute="top" secondItem="qDf-M4-aTz" secondAttribute="bottom" constant="10" id="d9F-Mh-eZh"/>
-                            <constraint firstItem="Izf-cB-Yd9" firstAttribute="leading" secondItem="Veo-zQ-wAw" secondAttribute="leading" constant="12" id="gi3-rN-9C1"/>
                             <constraint firstItem="Veo-zQ-wAw" firstAttribute="trailing" secondItem="qDf-M4-aTz" secondAttribute="trailing" constant="24" id="nxM-GO-bqK"/>
+                            <constraint firstItem="BLW-st-BGp" firstAttribute="top" secondItem="TrC-ip-dX3" secondAttribute="bottom" constant="20" id="rYd-vq-vNR"/>
                             <constraint firstItem="ZkA-z8-VQH" firstAttribute="centerX" secondItem="2Ng-wt-NlE" secondAttribute="centerX" id="tbt-b6-8hO"/>
                             <constraint firstItem="Veo-zQ-wAw" firstAttribute="trailing" secondItem="ZeA-BJ-k8J" secondAttribute="trailing" constant="24" id="un6-WV-isV"/>
                             <constraint firstItem="qDf-M4-aTz" firstAttribute="top" secondItem="cqC-05-dGA" secondAttribute="bottom" constant="24" id="vBR-Md-d3u"/>
                             <constraint firstAttribute="trailing" secondItem="cB1-ag-X1Y" secondAttribute="trailing" id="vGU-Qc-kyy"/>
                             <constraint firstItem="TrC-ip-dX3" firstAttribute="leading" secondItem="Veo-zQ-wAw" secondAttribute="leading" constant="24" id="whi-40-g2I"/>
-                            <constraint firstItem="Izf-cB-Yd9" firstAttribute="top" secondItem="TrC-ip-dX3" secondAttribute="bottom" constant="20" id="yE0-20-gwc"/>
+                            <constraint firstItem="ZeA-BJ-k8J" firstAttribute="top" secondItem="BLW-st-BGp" secondAttribute="bottom" constant="24" id="x7E-Yc-K9F"/>
+                            <constraint firstAttribute="trailing" secondItem="BLW-st-BGp" secondAttribute="trailing" constant="12" id="ywr-TR-YSs"/>
                             <constraint firstItem="cB1-ag-X1Y" firstAttribute="leading" secondItem="2Ng-wt-NlE" secondAttribute="leading" id="zmz-ob-sgI"/>
                         </constraints>
                     </view>
@@ -246,10 +264,11 @@
                     <connections>
                         <outlet property="colectionView" destination="qDf-M4-aTz" id="6wG-RK-rqX"/>
                         <outlet property="imageView" destination="Izf-cB-Yd9" id="GMm-rP-CcC"/>
-                        <outlet property="interestedLabel" destination="ZeA-BJ-k8J" id="Q6H-Cv-WMO"/>
+                        <outlet property="interestedLabel" destination="ZeA-BJ-k8J" id="Il2-kd-sh5"/>
                         <outlet property="notesSubtitle" destination="TrC-ip-dX3" id="nNf-Kn-xzZ"/>
                         <outlet property="notesTitle" destination="ZkA-z8-VQH" id="vk2-Jo-9qc"/>
                         <outlet property="premiumLabel" destination="HFE-G6-Wkj" id="WgO-oH-Xt9"/>
+                        <outlet property="profileDetailsLabel" destination="1sK-Me-6VP" id="WSN-6t-vzU"/>
                         <outlet property="upgradeButton" destination="cqC-05-dGA" id="FTu-US-Y21"/>
                     </connections>
                 </viewController>

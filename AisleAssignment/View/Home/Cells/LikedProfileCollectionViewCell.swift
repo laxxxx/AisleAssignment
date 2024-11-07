@@ -24,7 +24,7 @@ class LikedProfileCollectionViewCell: UICollectionViewCell {
         avatarImageView.layer.cornerRadius = 10
         // Load the image using Kingfisher
         if let url = URL(string: profile.avatar) {
-            avatarImageView.kf.setImage(with: url, placeholder: UIImage(named: "placeholder"))
+            avatarImageView.kf.setImage(with: url, placeholder: UIImage(named: ""))
         }
         
         // Set blur based on the `canSeeProfile` flag
