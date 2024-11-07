@@ -70,14 +70,24 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="2vz-8C-9iR"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="vwf-Ou-dxB"/>
                             </scrollView>
+                            <view alpha="0.85000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVF-X6-yQU">
+                                <rect key="frame" x="0.0" y="758" width="393" height="1"/>
+                                <color key="backgroundColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="mad-eh-QOJ"/>
+                                    <constraint firstAttribute="height" constant="1" id="pTG-sg-3CJ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="aVF-X6-yQU" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="8No-J1-K6x"/>
                             <constraint firstItem="EB0-1y-MfM" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="8yg-0B-vqF"/>
                             <constraint firstAttribute="trailing" secondItem="EB0-1y-MfM" secondAttribute="trailing" constant="24" id="Bzh-t2-de8"/>
                             <constraint firstItem="43W-cv-R9o" firstAttribute="top" secondItem="f68-E7-gaz" secondAttribute="bottom" constant="30" id="CxX-5b-FH7"/>
                             <constraint firstItem="EB0-1y-MfM" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="80" id="Ino-NA-ILm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="aVF-X6-yQU" secondAttribute="bottom" constant="10" id="OKA-NZ-DkN"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="G8J-pI-apg" secondAttribute="trailing" constant="24" id="Rk0-dy-wwN"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="43W-cv-R9o" secondAttribute="bottom" constant="20" id="Te8-X9-C7o"/>
                             <constraint firstItem="EB0-1y-MfM" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="24" id="UDA-vE-H9M"/>
@@ -86,6 +96,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="43W-cv-R9o" secondAttribute="trailing" constant="24" id="k3A-LN-YqP"/>
                             <constraint firstItem="f68-E7-gaz" firstAttribute="leading" secondItem="EB0-1y-MfM" secondAttribute="leading" constant="-10" id="lji-Qh-zAp"/>
                             <constraint firstItem="G8J-pI-apg" firstAttribute="leading" secondItem="EB0-1y-MfM" secondAttribute="leading" id="plf-Ev-5R0"/>
+                            <constraint firstAttribute="trailing" secondItem="aVF-X6-yQU" secondAttribute="trailing" id="sHg-C5-OhN"/>
                             <constraint firstItem="43W-cv-R9o" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="w3Y-7x-suO"/>
                         </constraints>
                     </view>
@@ -108,8 +119,23 @@
                     <view key="view" contentMode="scaleToFill" id="i9s-wH-1la">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.85000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PcM-S1-fFQ">
+                                <rect key="frame" x="0.0" y="758" width="393" height="1"/>
+                                <color key="backgroundColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="3Uc-5U-J1g"/>
+                                    <constraint firstAttribute="height" constant="1" id="Ik2-VR-3ig"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="n2G-AV-xoh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PcM-S1-fFQ" firstAttribute="leading" secondItem="i9s-wH-1la" secondAttribute="leading" id="JQg-NL-SIV"/>
+                            <constraint firstItem="n2G-AV-xoh" firstAttribute="bottom" secondItem="PcM-S1-fFQ" secondAttribute="bottom" constant="10" id="PFn-pc-c9H"/>
+                            <constraint firstAttribute="trailing" secondItem="PcM-S1-fFQ" secondAttribute="trailing" id="RBh-Jd-OBQ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="OJu-4G-kV0"/>
                 </viewController>
@@ -252,12 +278,23 @@
                                     <action selector="signOutTapped:" destination="Cxk-cU-6fO" eventType="touchUpInside" id="0Qh-3a-gcU"/>
                                 </connections>
                             </button>
+                            <view alpha="0.85000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUT-R5-joS">
+                                <rect key="frame" x="0.0" y="758" width="393" height="1"/>
+                                <color key="backgroundColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="cgI-OD-bmS"/>
+                                    <constraint firstAttribute="height" constant="1" id="qig-fk-OpT"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gfl-VW-hjZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="dUT-R5-joS" firstAttribute="leading" secondItem="lHD-8k-D8B" secondAttribute="leading" id="8s8-jF-tb8"/>
                             <constraint firstItem="r3o-ia-jtD" firstAttribute="centerY" secondItem="lHD-8k-D8B" secondAttribute="centerY" id="azM-qD-TZ5"/>
+                            <constraint firstItem="gfl-VW-hjZ" firstAttribute="bottom" secondItem="dUT-R5-joS" secondAttribute="bottom" constant="10" id="ohe-3W-oGY"/>
                             <constraint firstItem="r3o-ia-jtD" firstAttribute="centerX" secondItem="lHD-8k-D8B" secondAttribute="centerX" id="q5w-wv-De0"/>
+                            <constraint firstAttribute="trailing" secondItem="dUT-R5-joS" secondAttribute="trailing" id="xtj-e0-b9i"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="LyQ-6e-7Vi"/>
